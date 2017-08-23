@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/me/me",
+    "pages/seach/seach",
+    "pages/detaills/detaill",
+    "pages/logs/logs"
+  ],
+  "tabBar":{
+    "color":"#adadad",
+    "selectedColor":"#000",
+    "backgroundColor":"#f7f7fa",
+    "list":[
+      {
+        "pagePath": "pages/seach/seach",
+        "text": "搜索更多",
+        "iconPath": "/icons/seach.png",
+        "selectedIconPath": "/icons/seach-hov.png"
+      },{
+        "pagePath":"pages/index/index",
+        "text":"推荐电影",
+        "iconPath":"/icons/collect.png",
+        "selectedIconPath": "icons/collect-hov.png"
+
+      },
+      {
+        "pagePath":"pages/me/me",
+        "text":"我的",
+        "iconPath":"/icons/me.png",
+        "selectedIconPath":"/icons/me-hov.png"
+      }
+    ]
+  },
+  "window":{
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "豆瓣电影",
+    "navigationBarTextStyle":"white"
+  }
+}

@@ -1,0 +1,60 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  background: #fff;
+  box-sizing: border-box;
+} 
+
+
+
+/*搜索公共样式  */
+.seach-movie-item {
+  width: 100%;
+  padding:40rpx;
+  margin: 0 40rpx;
+  border-bottom: 2rpx solid #eee;
+  overflow: hidden;
+}
+.seach-movie-item .movie-img {
+  width: 140rpx;
+  height: 140rpx;
+  display: block;
+  float: left;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.seach-movie-item .movie-info {
+  position: relative;
+}
+.seach-movie-item .movie-info text {
+  display: block;
+  margin-right: 40rpx;
+}
+.seach-movie-item .movie-info .average {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  color: red;
+}
+.seach-movie-item .movie-info .name {
+  font-size: 28rpx;
+  color: #000;
+  margin-top: 10rpx;
+}
+.seach-movie-item .movie-info .original_title {
+  font-size: 24rpx;
+  color: #c0c0c0;
+  margin-top: 20rpx;
+}
+.seach-movie-item .movie-info .directors{
+  font-size: 24rpx;
+  margin-top: 30rpx;
+  color: #999;
+}

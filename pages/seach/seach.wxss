@@ -1,0 +1,76 @@
+/* pages/seach/seach.wxss */
+.seach {
+  width: 100%;
+  margin: 5rpx 10rpx;
+}
+.seach input{
+  border: 2rpx solid #ccc;
+  width: 570rpx;
+  margin-left: 20rpx;
+  padding-left: 10rpx;
+  height: 60rpx;
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  display: inline-block;
+}
+.seach button{
+  width: 120rpx;
+  height: 64rpx;
+  margin: 0;
+  display: inline-block;
+  margin-left: 5rpx;
+  padding: 0;
+  border: 2rpx solid #ccc;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 0;
+  position: relative;
+  top: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}
+.seach button::after{
+  content: none;
+  border-radius: 0;
+  top: 0;
+}
+
+.ranking{
+  width: 95%;
+  margin: 0 auto;
+}
+.ranking-name{
+  font-size: 28rpx;
+  margin: 10rpx 0;
+}
+.seach-movie{
+  width: 95%;
+  font-size: 28rpx;
+  margin:0 auto;
+}
+.seach-movie-item.defalute{
+  padding: 0;
+  margin: 0;
+  height: 60rpx;
+  display: block;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.seach-movie-item{
+  margin:0;
+  padding-left: 0;
+}
+.seach-movie-item{
+
+}
+.seach-movie-item:nth-of-type(1){color: red;}
+.seach-movie-item:nth-of-type(2){color: orange;}
+.seach-movie-item:nth-of-type(3){color: yellowgreen;}
+.seach-movie-item .name{
+  margin-left: 16rpx;
+}

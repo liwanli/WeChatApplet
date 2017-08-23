@@ -1,0 +1,15 @@
+<!--pages/detaills/detaill.wxml-->
+<view class="container">
+  <view class="movieBox">
+    <image class="img" src="{{movieData.image}}" />
+    <view class="Info">
+      <text class="name">{{movieData.title}}</text>
+      <text class="director">导演:{{movieData.author[0].name}}</text>
+      <text class="star">主演：{{movieData.attrs[0].cast[0]}}</text>
+      <text class="score">评分：{{movieData.rating.average}}</text>
+      <text class="introduction">简介：</text>
+      {{movieData.summary}}
+      <text class="other">其他</text>
+    </view>
+  </view>
+</view>

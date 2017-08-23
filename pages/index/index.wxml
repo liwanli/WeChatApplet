@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+<!--轮播图  -->
+  <swiper class="banner" indicator-dots="false"
+    autoplay="true" circular="true" interval="3000" duration="1000">
+    <block wx:for="{{imgUrls}}"  wx:key="*this" wx:for-index="idx" wx:for-item="items">
+      <swiper-item>
+        <image src="{{items}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+<!--分类  -->
+  <view class="classify">
+    <text class="item top250 {{currentTab==0?'on':''}}"  bindtap="top250">Top250</text>
+    <text class="item ltson {{currentTab==1 ? 'on' : ''}}"  bindtap="ltson">正在上映</text>
+    <text class="item abshow {{currentTab==2 ? 'on' : ''}}"  bindtap="abshow">即将上映</text>
+    <text class="item boxoffice {{currentTab==3 ? 'on' : ''}}"  bindtap="boxoffice">北美票房</text>
+  </view>
+<!--列表  -->
+  <view class="seach-movie-item" wx:for="{{movieData}}" wx:key="*this" wx:for-index="idx" wx:for-item="items">
+    <image class="movie-img" data-movieId="{{items.id}}" bindtap="detailing" src="{{items.images.small}}" />
+    <view class="movie-info">
+      <text class="name" data-movieId="{{items.id}}" bindtap="detailing">{{items.title}}</text>
+      <text class="average">{{items.rating.average}}</text>
+      <text class="original_title">{{items.original_title+"("+items.year+")"}}</text>
+      <text class="directors">{{items.directors[0].name}}</text>
+    </view>
+  </view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+  </view>
+</view>

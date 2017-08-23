@@ -1,0 +1,26 @@
+/**index.wxss**/
+.container {
+  overflow: hidden;
+}
+.banner{
+  width: 100%;
+}
+.banner .slide-image{
+  width: 100%;
+}
+.classify {
+  display: flex;
+  width: 100%;
+  display: -webkit-flex;
+  border-bottom: 2rpx solid #adadad;
+}
+.classify .item{
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.classify .item.on{
+  background: yellow;
+}

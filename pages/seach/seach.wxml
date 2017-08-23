@@ -1,0 +1,30 @@
+<!--pages/seach/seach.wxml-->
+<view class="container">
+<!--搜索框  -->
+  <view class="seach">
+    <input type="text" placeholder="搜索内容" value="{{seachdata}}" bindblur="seach" />
+    <button class="cancel" bindtap="cancel">取消</button>
+  </view>
+
+  <!-- 搜索内容 -->
+  <view class="ranking" hidden="{{seachhide}}">
+    <text class="ranking-name">热搜排名：</text>
+    <view class="seach-movie-item defalute" wx:for="{{movieData}}" wx:key="*this" wx:for-index="idx" wx:for-item="items">
+        <text class="index">{{idx+1}}</text>
+        <text class="name" data-movieId="{{items.id}}" bindtap="detailing">{{items.title}}</text>
+    </view>
+  </view>
+<!--列表  -->
+  <view class="seach-movie"  hidden="{{!seachhide}}">
+      <text>搜索{{seachdata}}的结果：</text>
+      <view class="seach-movie-item" wx:for="{{movieData}}" wx:key="*this" wx:for-index="idx" wx:for-item="items">
+        <image class="movie-img" data-movieId="{{items.id}}" bindtap="detailing" src="{{items.images.small}}" />
+        <view class="movie-info">
+          <text class="name" data-movieId="{{items.id}}" bindtap="detailing">{{items.title}}</text>
+          <text class="average">{{items.rating.average}}</text>
+          <text class="original_title">{{items.original_title+"("+items.year+")"}}</text>
+          <text class="directors">{{items.directors[0].name}}</text>
+        </view>
+      </view>
+  </view>
+</view>
